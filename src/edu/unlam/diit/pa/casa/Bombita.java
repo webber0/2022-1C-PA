@@ -38,5 +38,4 @@ public class Bombita {
 			return otra;
 		}
 	}
-
 }
