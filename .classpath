@@ -3,6 +3,8 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="loom"/>
 	<classpathentry kind="src" path="oia"/>
+	<classpathentry kind="src" path="Prolog"/>
+	<classpathentry kind="src" path="Haskell"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
 		<attributes>
 			<attribute name="module" value="true"/>
