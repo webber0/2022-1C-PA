@@ -1,8 +1,8 @@
 package edu.unlam.diit.pa.hotel;
 
-public class Hotel extends Alojamiento {
+public class Hosteria extends Alojamiento {
 
-	public Hotel(String nombre, int cantidadHabitaciones) {
+	public Hosteria(String nombre, int cantidadHabitaciones) {
 		super(nombre, cantidadHabitaciones);
 		// TODO Auto-generated constructor stub
 	}
@@ -16,10 +16,12 @@ public class Hotel extends Alojamiento {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());;
 		}
+
 	}
 
 	@Override
 	public int contarCantidadPasajeros() {
+		// TODO Auto-generated method stub
 		int cantidadPasajeros=0;
 		for(int i=0;i<this.habitaciones.length;i++) {
 			if(!this.habitaciones[i].estaLibre) {
@@ -31,13 +33,8 @@ public class Hotel extends Alojamiento {
 
 	@Override
 	public int contarHabitacionesCon(int mayores) {
-		int cantidadHabitaciones=0;
-		for(int i=0;i<this.habitaciones.length;i++) {
-			if(!this.habitaciones[i].estaLibre && this.habitaciones[i].cantidadMayores==mayores) {
-				cantidadHabitaciones++;
-			}
-		}
-		return cantidadHabitaciones;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
