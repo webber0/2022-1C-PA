@@ -34,7 +34,13 @@ public class Hosteria extends Alojamiento {
 	@Override
 	public int contarHabitacionesCon(int mayores) {
 		// TODO Auto-generated method stub
-		return 0;
+		int cantidadHabitaciones=0;
+		for(int i=0;i<this.habitaciones.length;i++) {
+			if(!this.habitaciones[i].estaLibre && this.habitaciones[i].cantidadMayores==mayores) {
+				cantidadHabitaciones++;
+			}
+		}
+		return cantidadHabitaciones;
 	}
 
 }
