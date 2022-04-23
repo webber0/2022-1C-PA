@@ -1,7 +1,5 @@
 package edu.unlam.diit.pa.hotel;
 
-import java.util.Objects;
-
 public class Habitacion {
 	protected int cantidadMayores, cantidadMenores;
 	protected boolean esCompartida, estaLimpia, estaLibre;
