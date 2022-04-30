@@ -1,7 +1,6 @@
 package edu.unlam.diit.pa.hotel;
 
 public class Hostel extends Alojamiento {
-
 	public Hostel(String nombre, int cantidadHabitaciones) {
 		super(nombre, cantidadHabitaciones);
 		// TODO Auto-generated constructor stub
