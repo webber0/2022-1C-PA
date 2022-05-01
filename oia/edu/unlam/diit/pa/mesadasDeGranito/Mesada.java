@@ -29,13 +29,12 @@ public class Mesada implements Comparable<Mesada> {
 
 	@Override
 	public String toString() {
-		return "[" + largo + ", " + ancho + "]";
+		return "[L: " + largo + ", A:" + ancho + "]";
 	}
 
 	@Override
 	public int compareTo(Mesada o) {
-		// TODO Auto-generated method stub
-		return 0;
+		return o.largo-this.largo;
 	}
 
 }
