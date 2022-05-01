@@ -14,9 +14,11 @@ public class Tanque {
 	}
 	
 	public void atacar() {
+		/*
 		if(this.modo.enemigoEnRango(enemigo)) {
 			this.modo.atacar(enemigo);
 		}
+		*/
 	}
 	/*
 	public void modoNormal() {
