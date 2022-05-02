@@ -1,12 +1,13 @@
 package edu.unlam.diit.pa.mesadasDeGranito;
 
-import java.util.ArrayList;
-import java.util.Collections;
+//import java.util.ArrayList;
+//import java.util.Collections;
 
 
 public class MainMesada {
 
 	public static void main(String[] args) {
+		/*
 		ArrayList<Mesada> test1 = new ArrayList<Mesada>();
 		
 		Mesada m1,m2,m3,m4,m5,m6;
@@ -31,6 +32,7 @@ public class MainMesada {
 		test1.clear();
 		
 		System.out.println(cantera.cantidadMinimaDePilas);
+		*/
 	}
 		
 }
