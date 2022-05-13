@@ -35,6 +35,7 @@ public class Mesada implements Comparable<Mesada> {
 	@Override
 	public int compareTo(Mesada o) {
 		return o.largo-this.largo;
+		//Agregar el caso de igual largo y distinto ancho
 	}
 
 }
