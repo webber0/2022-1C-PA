@@ -2,6 +2,11 @@ package edu.unlam.diit.pa.JugandoConLetras;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+/*
+ * Recursos adicionales: 
+ * Pattern Matching: https://www.w3schools.com/java/java_regex.asp
+ * BigO Pattern Matching: https://stackoverflow.com/questions/40896475/time-complexity-of-regular-expression-in-java
+ */
 
 public class Palabra {
 	protected String palabra;
