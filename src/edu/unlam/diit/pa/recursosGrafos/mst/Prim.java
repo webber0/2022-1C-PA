@@ -14,6 +14,14 @@ public class Prim {
 			visitados[i]=false;
 		}
 	}
+	
+	private boolean TodosVisitados(boolean[] nodos) {
+		for(boolean resultado:nodos) {
+			if(!resultado) return resultado;
+		}
+		return true;
+	}
+	
 	public void resolver(int grado, MatrizSimetrica matriz) throws MatrizSimetricaException {
 		int fila=0,columna=0,minimo_actual=-1,fila_min=0,columna_min=0,minimo_anterior=-1;
 		//para no ver el mismo nodo 2 veces
@@ -46,11 +54,5 @@ public class Prim {
 				System.out.println("Fila minima: "+ (fila_min+1) + ", Columna minima: "+ (columna_min+1) +", Pasos: "+ minimo_actual);
 			}
 		}
-	}
-	private boolean TodosVisitados(boolean[] nodos) {
-		for(boolean resultado:nodos) {
-			if(!resultado) return resultado;
-		}
-		return true;
 	}
 }
