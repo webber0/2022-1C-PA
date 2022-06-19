@@ -15,13 +15,13 @@ public class Archivo {
 
 	public Archivo(String nombreArchivo) {
 		this.nombreArchivo = nombreArchivo;
-		cantidadIslas=0;
+		cantidadIslas = 0;
 	}
-	
+
 	public ArrayList<AristaPonderada> leerGrafo() {
 		Scanner scanner = null;
 		ArrayList<AristaPonderada> datos = new ArrayList<AristaPonderada>();
-		int cantidadPuentes=0,cantidadTuneles=0;
+		int cantidadPuentes = 0, cantidadTuneles = 0;
 
 		try {
 			File file = new File("./oia/edu/unlam/diit/pa/Metro/In/" + nombreArchivo + ".in");
@@ -30,29 +30,29 @@ public class Archivo {
 			scanner.useLocale(Locale.ENGLISH);
 			// Para la configuración regional de Argentina, utilizar:
 			// arch.useLocale(new Locale("es_AR"));
-			cantidadIslas=scanner.nextInt();
-			cantidadTuneles=scanner.nextInt();
-			cantidadPuentes=scanner.nextInt();
-			if(cantidadPuentes==0 && cantidadTuneles==0) {
+			cantidadIslas = scanner.nextInt();
+			cantidadTuneles = scanner.nextInt();
+			cantidadPuentes = scanner.nextInt();
+			if (cantidadPuentes == 0 && cantidadTuneles == 0) {
 				throw new MetroException("No es posible realizar ninguna obra");
 			}
-					
-			while(scanner.hasNext()) {
-				//Pongo en 0 los tuneles
-				for(int i=0;i<cantidadTuneles;i++) {
-					int nodoDesde=scanner.nextInt();
-					int nodoHasta=scanner.nextInt();
-					datos.add(new AristaPonderada(nodoDesde,nodoHasta,0));
+
+			while (scanner.hasNext()) {
+				// Pongo en 0 los tuneles
+				for (int i = 0; i < cantidadTuneles; i++) {
+					int nodoDesde = scanner.nextInt();
+					int nodoHasta = scanner.nextInt();
+					datos.add(new AristaPonderada(nodoDesde, nodoHasta, 0));
 				}
-				//Pongo en 1 los puentes
-				for(int i=0;i<cantidadPuentes;i++) {
-					int nodoDesde=scanner.nextInt();
-					int nodoHasta=scanner.nextInt();
-					datos.add(new AristaPonderada(nodoDesde,nodoHasta,1));
+				// Pongo en 1 los puentes
+				for (int i = 0; i < cantidadPuentes; i++) {
+					int nodoDesde = scanner.nextInt();
+					int nodoHasta = scanner.nextInt();
+					datos.add(new AristaPonderada(nodoDesde, nodoHasta, 1));
 				}
 			}
 			Collections.sort(datos);
-		} catch(MetroException e) {
+		} catch (MetroException e) {
 			escribirResultado(e.getMessage());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -62,13 +62,13 @@ public class Archivo {
 		}
 		return datos;
 	}
-	
+
 	public void escribirResultado(int costoMinimo) {
 		FileWriter file = null;
 		PrintWriter printerWriter = null;
 
 		try {
-			file = new FileWriter("./oia/edu/unlam/diit/pa/Metro/Out/"+ nombreArchivo + ".out");
+			file = new FileWriter("./oia/edu/unlam/diit/pa/Metro/Out/" + nombreArchivo + ".out");
 			printerWriter = new PrintWriter(file);
 			printerWriter.println(costoMinimo);
 		} catch (Exception e) {
@@ -83,13 +83,13 @@ public class Archivo {
 			}
 		}
 	}
-	
+
 	public void escribirResultado(String msj) {
 		FileWriter file = null;
 		PrintWriter printerWriter = null;
 
 		try {
-			file = new FileWriter("./oia/edu/unlam/diit/pa/Metro/Out/"+ nombreArchivo + ".out");
+			file = new FileWriter("./oia/edu/unlam/diit/pa/Metro/Out/" + nombreArchivo + ".out");
 			printerWriter = new PrintWriter(file);
 			printerWriter.println(msj);
 		} catch (Exception e) {
@@ -104,5 +104,4 @@ public class Archivo {
 			}
 		}
 	}
-	
 }

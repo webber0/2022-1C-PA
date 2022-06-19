@@ -9,5 +9,4 @@ public class MainMetro {
 		kruscal.resolver(g);
 		a.escribirResultado(g.costoMinimo);
 	}
-
 }
