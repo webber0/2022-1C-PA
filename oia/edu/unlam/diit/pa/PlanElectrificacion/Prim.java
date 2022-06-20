@@ -1,9 +1,6 @@
 package edu.unlam.diit.pa.PlanElectrificacion;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Prim {
 	// Recursos necesarios para este ejercicio
