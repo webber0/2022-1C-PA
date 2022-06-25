@@ -7,8 +7,9 @@ public class MainReserva {
 		Archivo archivo=new Archivo("01_casoBase");
 		Grafo grafo=archivo.leerArchivo();
 		DFS dfs=new DFS();
-		dfs.resolver(grafo.getNodos()[0]);
-		
+		grafo.setResultado(dfs.resolver(grafo.getNodos()[0]));
+		System.out.println(grafo.getResultado());
+		archivo.escribirArchivo(grafo.getResultado());
 	}
 
 }

@@ -5,11 +5,11 @@ import java.util.Stack;
 
 public class DFS {
 	
-	public void resolver(Nodo nodo) {
-		dfs(nodo);
+	public int resolver(Nodo nodo) {
+		return dfs(nodo);
 	}
 	
-	private void dfs(Nodo nodo) {
+	private int dfs(Nodo nodo) {
 		Stack<Nodo> pila=new Stack<Nodo>();
 		int contador=0;
 		pila.add(nodo);
@@ -32,6 +32,6 @@ public class DFS {
 				}
 			}
 		}
-		System.out.println(contador);
+		return contador;
 	}
 }

@@ -2,6 +2,9 @@ package edu.unlam.diit.pa.RecorriendoLaReserva;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Archivo {
@@ -37,6 +40,26 @@ public class Archivo {
 			scanner.close();
 		}
 		return dato;
+	}
+	
+	public void escribirArchivo(int resultado) {
+		FileWriter file=null;
+		PrintWriter printwriter=null;
+		try {
+			file=new FileWriter("./oia/edu/unlam/diit/pa/RecorriendoLaReserva/Out/"+filename+".out");
+			printwriter=new PrintWriter(file);
+			printwriter.println(resultado);
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}finally {
+			if(file!=null) {
+				try {
+					file.close();
+				}catch(IOException e) {
+					System.out.println(e.getMessage());
+				}
+			}
+		}
 	}
 
 }
