@@ -11,7 +11,7 @@ public class DFS {
 	
 	private void dfs(Nodo nodo) {
 		Stack<Nodo> pila=new Stack<Nodo>();
-		int contador=0, iteracion=0;
+		int contador=0;
 		pila.add(nodo);
 		while(!pila.isEmpty()) {
 			Nodo elementoActual=pila.pop();
