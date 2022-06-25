@@ -1,17 +1,17 @@
 package edu.unlam.diit.pa.RescatandoALaPrincesa;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class Dijkstra {
-	public void resolver(Vertex g) {
-		algoritmo(g);
-	}
-	
-	private void algoritmo(Vertex g) {
-		g.setDistance(0);
+	public void computeShortestPaths(Vertex sourceVertex){
+		 
+        sourceVertex.setDistance(0);
         PriorityQueue<Vertex> priorityQueue = new PriorityQueue<>();
-        priorityQueue.add(g);
-        g.setVisited(true);
+        priorityQueue.add(sourceVertex);
+        sourceVertex.setVisited(true);
  
         while( !priorityQueue.isEmpty() ){
             // Getting the minimum distance vertex from priority queue
@@ -34,5 +34,16 @@ public class Dijkstra {
             }
             actualVertex.setVisited(true);
         }
+    }
+ 
+    public List<Vertex> getShortestPathTo(Vertex targetVertex){
+        List<Vertex> path = new ArrayList<>();
+ 
+        for(Vertex vertex=targetVertex;vertex!=null;vertex=vertex.getPredecessor()){
+            path.add(vertex);
+        }
+ 
+        Collections.reverse(path);
+        return path;
     }
 }
